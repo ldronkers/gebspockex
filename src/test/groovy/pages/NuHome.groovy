@@ -16,10 +16,9 @@ class NuHome extends Page{
         mainMenuItem { $("span", class: "nav-item-text", text: "Voorpagina")}
     }
 
-    void resizeWindow(){
-        Dimension dimension = new Dimension(400, 700)
+    void resizeWindow(int width, int height){
         WebDriver driver = getDriver()
-        driver.manage().window().setSize(dimension)
+        driver.manage().window().setSize(new Dimension(width, height))
         sleep(2000) // see what's going on, delete if used
     }
 }
